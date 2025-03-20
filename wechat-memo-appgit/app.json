@@ -1,0 +1,34 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/personalCenter/personalCenter",
+        "pages/memo/memo"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff69b4",
+        "navigationBarTitleText": "pink备忘录",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "color": "#000000",
+      "selectedColor": "ff69b4",
+      "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/personalCenter/personalCenter",
+                "iconPath": "pages/images/个人中心0.png",
+                "text": "个人中心",
+                "selectedIconPath": "pages/images/个人中心.png"
+                
+            },
+            {
+                "pagePath": "pages/memo/memo",
+                "iconPath": "pages/images/备忘录0.png",
+                "text": "备忘页",
+                "selectedIconPath": "pages/images/备忘录.png"
+            }
+        ]
+    }
+}
+    

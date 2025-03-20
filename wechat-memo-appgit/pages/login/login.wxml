@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="head">
+      <h3>pink备忘录</h3>
+    </view>
+    <input placeholder="用户名" bindinput="usernameChange" />
+    <input placeholder="密码" password bindinput="passwordChange" />
+    <p bindtap="forgetPassword">?忘记密码</p>
+    <button bindtap="login">登录</button>
+    <button bindtap="gotoRegister">注册</button>
+<!--     
+    <button bindtap="forgetPassword">忘记密码</button> -->
+    <view wx:if="{{isRegisterPopup}}">
+        <view class="popup">
+            <input placeholder="用户名" bindinput="registerUsernameChange" />
+            <input placeholder="密码（至少6位）" password bindinput="registerPasswordChange" />
+            <input placeholder="邮箱" bindinput="registerEmailChange" />
+            <button bindtap="doRegister">提交注册</button>
+            <button bindtap="closeRegisterPopup">关闭</button>
+        </view>
+    </view>
+    <view wx:if="{{isForgetPasswordPopup}}">
+        <view class="popup">
+            <input placeholder="邮箱" bindinput="forgetPasswordEmailChange" />
+            <button bindtap="checkEmail">验证邮箱</button>
+            <view wx:if="{{canResetPassword}}">
+                <input placeholder="新密码（至少6位）" password bindinput="newPasswordChange" />
+                <button bindtap="resetPassword">重置密码</button>
+            </view>
+            <button bindtap="closeForgetPasswordPopup">关闭</button>
+        </view>
+    </view>
+</view>
+    

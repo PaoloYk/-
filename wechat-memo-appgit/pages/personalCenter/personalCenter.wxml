@@ -1,0 +1,21 @@
+<view class="container">
+    <view wx:if="{{!isLogin}}">
+        <button bindtap="gotoLogin">登录</button>
+        <button bindtap="gotoRegister">注册</button>
+        <button bindtap="forgetPassword">忘记密码</button>
+    </view>
+    <view wx:else class="login_succ">
+        <view>用户名: {{userInfo.name}}</view>
+        <button bindtap="showChangePasswordPopup">修改密码</button>
+        <view wx:if="{{isChangePasswordPopup}}">
+            <view class="popup">
+                <input placeholder="旧密码" password bindinput="oldPasswordChange" />
+                <input placeholder="新密码（至少6位）" password bindinput="newPasswordChange" />
+                <button bindtap="doChangePassword">提交修改</button>
+                <button bindtap="closeChangePasswordPopup">关闭</button>
+            </view>
+        </view>
+        <button bindtap="logout">退出登录</button>
+    </view>
+</view>
+    

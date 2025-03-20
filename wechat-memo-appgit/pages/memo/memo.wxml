@@ -1,0 +1,13 @@
+<!-- wechat-memo-app/pages/memo/memo.wxml -->
+<view class="container">
+    <input placeholder="请输入事项" bindinput="inputChange" />
+    <button bindtap="addItem">添加事项</button>
+    <view class="count">共 {{memoList.length}} 条记录</view>
+    <view wx:for="{{memoList}}" wx:key="*this" class="memo-item">
+        <view class="content-time">
+            <view class="content">{{item.content}}</view>
+            <view class="time">{{item.time}}</view>
+        </view>
+        <button bindtap="deleteItem" data-index="{{index}}">删除</button>
+    </view>
+</view>

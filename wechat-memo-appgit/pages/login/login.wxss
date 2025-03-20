@@ -1,0 +1,46 @@
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.head{
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+p{
+  font-size: small;
+  color: deeppink;
+  display: flex;
+  justify-content: flex-end; /* 使内部元素右对齐 */
+  align-items: center;
+  margin-right: 20px;
+}
+
+button {
+    margin: 10px;
+    float: left;
+    background-color: pink;
+    color: #ffffff;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 100;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 20pxauto;
+}
+    
